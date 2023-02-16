@@ -1,0 +1,109 @@
+* Overview and Introduction to LISP
+Figuring out a way to communicate declarative knowledge, what is the truth.
+
+What they really were doing is starting to form intuition for process, how to do things.
+
+Method, How to knowledge.
+
+Magic, abstraction
+
+Procedure, directs a process, set of rules.
+
+- LISP
+
+How to deal with very large systems, techniques for controlling the complexity
+of large systems.
+
+From complex to simple things
+
+Computer science are idealized components, there are no physical constrains.
+
+If you can imagine, you can do. Abstract form of engineering.
+
+- Black box abstraction
+
+  | Input | Black box | Outout |
+  | 36    |           | 6      |
+  | a, b  | f(a,b)    | x      |
+  |       |           |        |
+ 
+Find a point, fixed point of a function that f(y) = y
+
+Procedures are way to talk about knowledge.
+
+Procedure that talks to another procedure.
+
+* Black box abstraction
+** Primitive objects
+- Primitive procedures
+- Primitive data
+** Means of combination
+- Procedure composition
+- Construction of compound data
+** Means of abstraction
+- Procedure definition
+- Simple data abstraction
+** Capturing common patterns
+- High order procedures
+- Data as procedures
+
+* Conventional interface
+Agreed upon ways of plugging things
+
+- Generic operations
+- Large scale structure and modularity
+- Object oriented programming
+- Operations on agreegates
+
+  
+* Metalinguistic abstraction (Making languages)
+
+New design language that emphasize and surpress some features.
+Reduce abstraction.
+
+- Interpretation apply-eval
+- Example logic programming
+- Register machines
+
+
+* General framework of a languages
+- What are the primitive elements
+  What comes with the language
+- Means of combination
+  How do you put it together
+- What are the means of abstraction
+  How do we take complex and make boxes
+
+  
+How do we build that and how can we use those elements to write for more complex things.
+
+
+(+ 3 12.4 5)
+|    ( |          |
+|    + | Operator |
+|    3 | Operand  |
+| 12.4 | Operand  |
+|    5 | Operand  |
+|    ) |          |
+
+Operands can be combinations
+Parenthesis has meaning, they should match, operands and operation applied to them.
+Trees, the parenthesis is a way to express trees.
+
+#+begin_src:
+(+ 3 (* 5 6) 8 7)
+
+(+ (* 3(+ 7 19.5)) 4)
+
+(+ (* 1 2)
+   (* 1
+      (- 1 1)))
+
+(define a (+ 5 5))
+
+(* a a)
+
+(define b (+ a (* 5 a)))
+
+(define (square x) (* x x))
+#+end_src:
